@@ -1,0 +1,40 @@
+html,body{
+	background-color: lightgray;
+	height: 99vh;
+	overflow: hidden;
+}
+hr{
+	margin: 0px;
+}
+span{
+	font-size: large;
+}
+.container {
+	background-color:whitesmoke;
+	height: 100%;
+	margin: 8px;
+	display: grid;
+	grid-template-rows: 1fr 40px;
+	background-blend-mode:multiply;
+}
+.editor{
+	overflow: auto;
+}
+.WindowTitle{
+	font-size: large;
+}
+.large{
+	font-size: large;
+}
+.input-1{
+	display: grid;
+	grid-template-columns: 1fr 27px 27px;
+	gap: 2px;
+	margin: 2px;
+}
+.submitBox{
+	display: grid;
+	grid-template-columns: 1fr 60px 60px;
+	gap: 2px;
+	margin: 2px;
+}

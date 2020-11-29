@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <meta charset="UTF-8">
+	<title>CanDIC dev WordEdit</title>
+
+</head>
+<body topmargin=0 leftmargin=0 rightmargin=0>
+    <div id="container" class="container">
+        <div id="editor"class="editor">
+            <div id="entry" class="bigcolumn">
+                    <div name="entry0">
+                    <span id="wordID">ID:NoData</span>
+                    <hr>
+                    <span>語形</span>
+                    <div id="formBox" class="contents_border">
+
+                    </div>
+                    <form class="input-1">
+                        <a></a>
+                        <a></a>
+                        <input type="button" name="add" value="+" onclick="add_button(1)"/>
+                    </form>
+
+                    <hr>
+                    <span>撥音</span>
+                    <div id="pronunBox" class="contents_border">
+
+                    </div>
+                    <form class="input-1">
+                        <a></a>
+                        <a></a>
+                        <input type="button" name="add" value="+" onclick="add_button(2)"/>
+                    </form>
+
+                    <hr>
+                    <span>タグ</span>
+                    <div id="tagBox">
+
+                    </div>
+
+                    <hr>
+                    <span>文字</span>
+                    <div id="charBox" class="charBox">
+
+                    </div>
+                    
+                    <form class="input-1">
+                        <a>そのうちUnicode表からの指定・プレビューもしたい</a>
+                        <a></a>
+                        <input type="button" name="add" value="+" onclick="add_button(3)"/>
+                    </form>
+
+
+                    <hr>
+                </div>
+            </div>
+            <div id="contents" class="bigcolumn">
+                <span>訳詳細</span>
+                <div id="contentsBox"></div>
+                <hr>
+                <form class="input-1">
+                    <a>注意：このボタンで追加した要素は空でも保存されます。＝＝＞</a>
+                    <a></a>
+                    <input type="button" name="add" value="+" onclick="add_button(4)"/>
+                </form>
+            </div> 
+        </div>
+        <div id="submit" class="submit">
+            <hr>
+            <form id="submitBox">
+                <a></a>
+                <input type="button" value=削除 onclick="delete_word()" class="delete_button">
+                <a></a>
+                <input type="button" value=破棄 onclick="disagree()">
+                <input type="button" value=確定 onclick="agree()">
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="./editor-style.css">
+    <script src = "js/script_2.js"></script>
+</body>
+</html>

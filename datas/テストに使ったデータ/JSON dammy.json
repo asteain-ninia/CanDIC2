@@ -1,0 +1,65 @@
+{
+  "words": [
+      {
+          "entry": {
+              "id": 1,
+              "form": "出語"
+          },
+          "translations": [
+              {
+                  "title": "品詞",
+                  "forms": [
+                      "日訳"
+                  ]
+              },
+              {
+                  "title": "品詞２",
+                  "forms": [
+                      "日訳２"
+                  ]
+              }
+          ],
+          "tags": [
+              "タグ"
+          ],
+          "contents": [
+              {
+                  "title": "内容表題",
+                  "text": "内容：語義など"
+              }
+          ],
+          "variations": [
+              {
+                  "title": "変化形題目",
+                  "form": "変化形"
+              }
+          ],
+          "relations": []
+      }
+  ],
+  "zpdic": {
+      "alphabetOrder": "",
+      "wordOrderType": "UNICODE",
+      "punctuations": [
+          ",",
+          "、"
+      ],
+      "ignoredTranslationRegex": "",
+      "pronunciationTitle": null,
+      "plainInformationTitles": [],
+      "informationTitleOrder": null,
+      "formFontFamily": null,
+      "defaultWord": {
+          "entry": {
+              "id": -1,
+              "form": ""
+          },
+          "translations": [],
+          "tags": [],
+          "contents": [],
+          "variations": [],
+          "relations": []
+      }
+  },
+  "snoj": null
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CanDIC dev Index</title>
+
+</head>
+<body topmargin=0 leftmargin=0 rightmargin=0>
+
+    <div class="container">
+
+        <div class="viewer">
+            <div class="search">
+                <form name="search" class="a">
+                    <input id="search" type=text placeholder="検索設定は未実装。検索は出来る。" onkeyup="dic_search()">
+                    <select>
+                        <option value=0>語形検索</option>
+                        <option value=1>訳語検索</option>
+                        <option vlaue=1>全文検索</option>
+                    </select>
+                </form>
+            </div>
+
+            <div id="dictionary" class="dictionary">
+                <div>
+                    <br>ここに辞書が開く<br><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="editor" id="editor">
+            ここにはテキストエディタ状の機能が載る予定。    <br>
+            そのうち辞書のデータからunicodeの入力・表示が出来るようになる。<br>
+            
+            <input type="button" onclick="OpenEdit(-1)" value="単語の新規作成" >
+            <br>
+
+            <input type="button" onclick="debugButton()" value="デバッグ用：sample.jsonを開く"/>
+            <br>
+            <input type="button" onclick="OpenEditDEV(0)" value="デバッグ用：編集windowの表示-ID0"/>
+            <input type="button" onclick="OpenEditDEV(-1)" value="デバッグ用：編集windowの表示-新規単語"/>
+
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="./index-style.css">
+    <script src = "js/script_1.js"></script>
+</body>
+</html>

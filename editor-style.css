@@ -1,0 +1,158 @@
+html,body{
+	background-color: lightgray;
+	height: 99vh;
+	overflow: hidden;
+}
+textarea{
+	resize:vertical;
+}
+
+.container {
+	background-color:whitesmoke;
+	height: 100%;
+	margin: 8px;
+	display: grid;
+	grid-template-rows: 1fr 40px;
+	background-blend-mode:multiply;
+}
+.editor{
+	overflow: auto;
+}
+
+form#submitBox{
+	display: grid;
+	grid-template-columns: 1fr 60px 10px 60px 60px;
+	gap: 2px;
+	margin: 2px;
+}
+.delete_button{
+	color: red;
+}
+.input-1{
+	display: grid;
+	grid-template-columns: 1fr 27px 27px;
+	gap: 2px;
+	margin: 2px;
+}
+.input-2{
+	display: grid;
+	grid-template-columns: 1fr 27px;
+	gap: 2px;
+	margin: 2px;
+	border-left: solid 3px gray;
+}
+
+.bigcolumn{
+	border-left: solid 2px darkgray;
+	margin: 2px;
+}
+
+div#tagBox{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+	gap: 5px;
+	margin: 2px;
+}
+.tag{
+	border:solid 1px black;
+	user-select: none;
+	background-color: gray;
+	min-width: 6em;
+}
+
+.charBox{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+	gap: 7px;
+	margin: 2px;
+}
+.char{
+	display: grid;
+	grid-template-columns: 1fr 27px;
+	gap: 2px;
+}
+.char_value{
+	font-size: large;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+input[name="add"]{
+	font-size: large;
+}
+input[name="remove"]{
+	font-size: large;
+	height: 27px;
+	width: 27px;
+}
+
+
+
+.large{
+	font-size: large;
+}
+.content{
+	border-left: solid 3px gray;
+	margin: 3px;
+	margin-bottom: 15px;
+}
+
+.contents_border{
+	border-left: solid 3px gray;
+	margin: 3px;
+}
+
+.class{
+	font-size: large;
+	min-width: 10em;
+	margin: 3px;
+}
+.title{
+	font-size: large;
+	min-width: 10em;
+	margin: 3px;
+}
+.textBox{
+	min-height: 3em;
+	width: 98%;
+	font-size: large;
+	margin: 3px;
+}
+.selectionBox{
+	display: grid;
+	grid-template-columns: 0.5fr 27px;
+	gap: 3px;
+}
+
+hr{
+	margin: 0;
+}
+
+/*入れ子構造把握のためのborderたち
+.container > * > *{
+	margin: 4px;
+	border: solid 3px purple;
+}
+.container > * > * > *{
+	margin: 4px;
+	border: solid 3px green;
+}
+.container> * > * > * > *{
+	margin: 4px;
+	border: solid 3px skyblue;
+}
+.container> * > * > * > * >*{
+	margin: 4px;
+	border: solid 3px orangered;
+}
+.container> * > * > * > * > * >*{
+	margin: 4px;
+	border: solid 3px blue;
+} 
+.container> * > * > * > * > * >* >*{
+	margin: 4px;
+	border: solid 3px yellowgreen;
+} 
+hr{
+	border: solid 3px black;
+}*/
