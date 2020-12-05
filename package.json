@@ -1,13 +1,13 @@
 {
 	"name": "candic",
-	"version": "1.0.0",
+	"version": "beta 2.0.0",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:asteain-ninia/CanDIC"
+		"url": "git@github.com:asteain-ninia/CanDIC2"
 	},
 	"author": "asteain-ninia",
-	"main": "main.js",
-	"license": "わからない",
+	"main": "master.js",
+	"license": "わからん",
 	"dependencies": {
 		"jszip": "^3.5.0"
 	},
