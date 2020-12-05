@@ -15,7 +15,7 @@ function createWindow(){
       //width:1200,
       height: 750,
       useContentSize:true,
-      icon: './images/icon.png',
+      icon: './images/icon.png', 
       webPreferences: {nodeIntegration: true}
     }
   );
@@ -57,9 +57,9 @@ function createEditor(){
   editor.on('closed', () => {editor = null;});
 }
 
-let dic_config;
-function createDICconfig(){
-  dic_config=new BrowserWindow({
+let naming;
+function create_namingWindow(){
+  naming=new BrowserWindow({
     title:'CanDIC DICconfig',
     width: 600+500,
     minWidth:300+500,
@@ -72,16 +72,16 @@ function createDICconfig(){
     webPreferences: {nodeIntegration: true}
   });
 
-  dic_config.setMenu(null);
+  naming.setMenu(null);
 
-  dic_config.loadURL(`file://${__dirname}/dic_config.html`);
-  dic_config.webContents.openDevTools();
+  naming.loadURL(`file://${__dirname}/naming.html`);
+  naming.webContents.openDevTools();
 
-  dic_config.webContents.on('did-finish-load', ()=>{
+  naming.webContents.on('did-finish-load', ()=>{
     index.webContents.send('beacon');
   });
 
-  dic_config.on('closed', () => {dic_config = null;});
+  naming.on('closed', () => {naming = null;});
 }
 
 let about;
@@ -166,10 +166,10 @@ function initWindowMenu(){
       {
         label:"辞書設定",
         click(){
-          if(!dic_config){
-            createDICconfig();
+          if(!naming){
+            create_namingWindow();
           }else{
-            dic_config.focus();
+            naming.focus();
           }
         }
       }
@@ -286,38 +286,38 @@ function removeNull(value){
 }
 
 ipcMain.on('config',(event,arg)=>{
-  dic_config.webContents.send("target",arg);
+  naming.webContents.send("target",arg);
 });
 
 ipcMain.on('close_signal_dic',(event,arg)=>{
-  dic_config=getFocusedWindow();
+  naming=getFocusedWindow();
   switch(arg.save_flag){
 
     case 0:
-      var choise=dialog.showMessageBoxSync(dic_config,{
+      var choise=dialog.showMessageBoxSync(naming,{
         type:'warning',
         title:'警告',
         message:'使用されている題目が削除された場合、単語内の情報は無に置換されます。この操作は復元不能です。本当によろしいですか。',
         buttons:['ok', 'cancel',]
       })
       if(choise==0){
-        dic_config.webContents.send('save')
+        naming.webContents.send('save')
       }
       break;
 
     case 1:
-      var choise=dialog.showMessageBoxSync(dic_config,{
+      var choise=dialog.showMessageBoxSync(naming,{
         type:'warning',
         title:'警告',
         message:'編集を保存せず終了します。よろしいですか。',
         buttons:['ok', 'cancel',]
       })
       if(choise==0){
-        dic_config.close();
+        naming.close();
       }
       break;
     case 2:
-      dic_config.close();
+      naming.close();
       index.webContents.send('modify_signal_dic');
       break;
   }
