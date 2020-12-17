@@ -1,7 +1,9 @@
-const electron = require('electron');
-const {ipcRenderer} = electron;
-const fs = require('fs');
-const path = require('path');
+
+//const electron = remote.require('electron');
+//const ipcRenderer = electron.ipcRenderer;
+const BrowserWindow = remote;
+const fs = remote.require('fs');
+const path = remote.require('path');
 
 var DefaultJSON=
     {

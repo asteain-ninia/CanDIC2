@@ -16,7 +16,10 @@ function createWindow(){
       height: 750,
       useContentSize:true,
       icon: './images/icon.png', 
-      webPreferences: {nodeIntegration: true}
+      webPreferences: {
+      //  nodeIntegration: true,
+      preload:`file://${__dirname}/preload.html`,
+      }
     }
   );
 
@@ -45,7 +48,7 @@ function createEditor(){
     webPreferences: {nodeIntegration: true}
   });
 
-  editor.setMenu(null);
+  editor.removeMenu();
 
   editor.loadURL(`file://${__dirname}/editor.html`);
   editor.webContents.openDevTools();
@@ -72,7 +75,7 @@ function create_namingWindow(){
     webPreferences: {nodeIntegration: true}
   });
 
-  naming.setMenu(null);
+  naming.removeMenu();
 
   naming.loadURL(`file://${__dirname}/naming.html`);
   naming.webContents.openDevTools();
@@ -97,7 +100,7 @@ function createAbout(){
       webPreferences: {nodeIntegration: true}
     }
   );
-  about.setMenu(null);
+  about.removeMenu();
   //about.webContents.openDevTools();
   about.loadURL(`file://${__dirname}/about.html`);
 
